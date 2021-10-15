@@ -74,8 +74,4 @@ plot_p <- function(n, d, k, data) {
            displaylogo = FALSE ,
            locale = 'pt-BR',
            mathjax = 'cdn')
-
 }
-
-
-
