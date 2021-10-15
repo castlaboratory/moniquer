@@ -6,7 +6,7 @@
 #'
 #' @param n Variable for sample size
 #' @param d Variable for non-expected observations
-#' @param k Variable fot sample index
+#' @param k Variable for sample index
 #' @param data Data set with the variables n, d, and k
 #' @return A Plotly graphic
 #' @export
