@@ -29,15 +29,15 @@ plot_p <- function(n, d, k, data) {
 
   if (length(unique(data[[n]])) == 1) {
     data$p <- 100 * (data[[d]]/data[[n]])
-    data$p_bar <- sum(data[[p]])/dim(data)[1]
-    data$sigma_hat <- sqrt((data[[p_bar]] * (100 - data[[p_bar]]))/dim(data)[1])
+    data$p_bar <- sum(data$p)/dim(data)[1]
+    data$sigma_hat <- sqrt((data$p_bar * (100 - data$p_bar))/data[[n]])
 
-    data$ucl <- data[[p_bar]] + (3 * data[[sigma_hat]])
-    data$lcl <- data[[p_bar]] - (3 * data[[sigma_hat]])
+    data$ucl <- data$p_bar + (3 * data$sigma_hat)
+    data$lcl <- data$p_bar - (3 * data$sigma_hat)
   } else {
     data$p <- 100 * (data[[d]]/data[[n]])
     data$p_bar <- 100 * (sum(data[[d]])/sum(data[[n]]))
-    data$sigma_hat <- sqrt((data$p_bar * (100 - data$p_bar)))/sqrt(dim(data)[1])
+    data$sigma_hat <- sqrt((data$p_bar * (100 - data$p_bar)))/sqrt(data[[n]])
 
     data$ucl <- data$p_bar + (3 * data$sigma_hat)
     data$lcl <- data$p_bar - (3 * data$sigma_hat)
@@ -59,12 +59,15 @@ plot_p <- function(n, d, k, data) {
     add_trace(y = ~ucl,
               name = 'LSC',
               mode = 'lines',
-              color = I("red")) %>%
+              color = I("red"),
+              line = list(shape = "hv")) %>%
     add_trace(y = ~lcl,
               name = 'LIC',
               mode = 'lines',
-              color = I("red")) %>%
-    layout(xaxis = list(title = 'Amostra'),
+              color = I("red"),
+              line = list(shape = "hv")) %>%
+    layout(title = paste0("Gráfico P de ", names(data[d])),
+           xaxis = list(title = 'Amostra'),
            yaxis = list(title = 'Proporção'),
            hovermode = "x unified") %>%
     config(modeBarButtonsToRemove = c("zoomIn2d", "zoomOut2d",  'zoom2d', 'pan2d', 'resetScale2d',
