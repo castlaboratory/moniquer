@@ -124,7 +124,7 @@ plot_xbar <- function(x, k, data) {
              mathjax = 'cdn')
 
     return(list("plot_x_bar" = plot_x_bar,
-                "plot_s_bar" = plot_s_bar))
+                "plot_rs_bar" = plot_s_bar))
 
   } else {
     x_bar_sample <- data %>%
@@ -215,6 +215,6 @@ plot_xbar <- function(x, k, data) {
              mathjax = 'cdn')
 
     return(list("plot_x_bar" = plot_x_bar,
-                "plot_r_bar" = plot_r_bar))
+                "plot_rs_bar" = plot_r_bar))
   }
 }
