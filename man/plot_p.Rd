@@ -11,7 +11,7 @@ plot_p(n, d, k, data)
 
 \item{d}{Variable for non-expected observations}
 
-\item{k}{Variable fot sample index}
+\item{k}{Variable for sample index}
 
 \item{data}{Data set with the variables n, d, and k}
 }
