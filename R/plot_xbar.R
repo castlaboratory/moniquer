@@ -123,7 +123,8 @@ plot_xbar <- function(x, k, data) {
              locale = 'pt-BR',
              mathjax = 'cdn')
 
-    return(subplot(plot_x_bar, plot_s_bar, nrows=2))
+    return(list("plot_x_bar" = plot_x_bar,
+                "plot_s_bar" = plot_s_bar))
 
   } else {
     x_bar_sample <- data %>%
@@ -213,6 +214,7 @@ plot_xbar <- function(x, k, data) {
              locale = 'pt-BR',
              mathjax = 'cdn')
 
-    return(subplot(plot_x_bar, plot_r_bar, nrows=2))
+    return(list("plot_x_bar" = plot_x_bar,
+                "plot_r_bar" = plot_r_bar))
   }
 }
