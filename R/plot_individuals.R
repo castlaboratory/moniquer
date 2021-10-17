@@ -102,6 +102,5 @@ plot_individuals <- function(x, k, data) {
            locale = 'pt-BR',
            mathjax = 'cdn')
 
-  return(list("plot_x" = plot_x,
-              "plot_mr" = plot_mr))
+  return(subplot(plot_x, plot_mr, nrows=2))
 }
