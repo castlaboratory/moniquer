@@ -47,7 +47,8 @@ plot_p <- function(n, d, k, data) {
   data %>%
     plot_ly(x = ~k,
             y = ~p,
-            mode = "lines") %>%
+            mode = "lines",
+            source = "plot_p") %>%
     add_trace(y = ~p, name = 'Proporção', mode = 'lines+markers') %>%
     add_trace(y = ~p_bar,
               name = TeX("\\bar{p}"),
