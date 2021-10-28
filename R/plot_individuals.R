@@ -37,7 +37,8 @@ plot_individuals <- function(x, k, data) {
   plot_x <- data %>%
     plot_ly(x = ~k,
             y = ~x,
-            mode = "lines") %>%
+            mode = "lines",
+            source = "plot_x") %>%
     add_trace(y = ~x, name = 'Valor individual', mode = 'lines+markers') %>%
     add_trace(y = ~x_bar,
               name = TeX("\\bar{x}"),
@@ -71,7 +72,8 @@ plot_individuals <- function(x, k, data) {
   plot_mr <- data[-1,] %>%
     plot_ly(x = ~k,
             y = ~mr,
-            mode = "lines") %>%
+            mode = "lines",
+            source = "plot_mr") %>%
     add_trace(y = ~mr, name = 'Amplitude móvel', mode = 'lines+markers') %>%
     add_trace(y = ~mr_bar_for_x,
               name = TeX("\\bar{mr}"),

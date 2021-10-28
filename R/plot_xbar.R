@@ -58,7 +58,8 @@ plot_xbar <- function(x, k, data) {
     plot_x_bar <- data %>%
       plot_ly(x = ~unique(k),
               y = ~x_bar_sample$x_bar_sample,
-              mode = "lines") %>%
+              mode = "lines",
+              source = "plot_x_bar") %>%
       add_trace(y = ~x_bar_sample$x_bar_sample, name = 'Valor individual', mode = 'lines+markers') %>%
       add_trace(y = ~x_bar[[1]],
                 name = TeX("\\bar{\\bar{x}}"),
@@ -92,7 +93,8 @@ plot_xbar <- function(x, k, data) {
     plot_s_bar <- data %>%
       plot_ly(x = ~unique(k),
               y = ~s_sample$s_sample,
-              mode = "lines") %>%
+              mode = "lines",
+              source = "plot_s_bar") %>%
       add_trace(y = ~s_sample$s_sample, name = 'DP amostral', mode = 'lines+markers') %>%
       add_trace(y = ~s_bar[[1]],
                 name = TeX("\\bar{S}"),
@@ -149,7 +151,8 @@ plot_xbar <- function(x, k, data) {
     plot_x_bar <- data %>%
       plot_ly(x = ~unique(k),
               y = ~x_bar_sample$x_bar_sample,
-              mode = "lines") %>%
+              mode = "lines",
+              source = "plot_x_bar") %>%
       add_trace(y = ~x_bar_sample$x_bar_sample, name = 'Valor individual', mode = 'lines+markers') %>%
       add_trace(y = ~x_bar[[1]],
                 name = TeX("\\bar{\\bar{x}}"),
@@ -183,7 +186,8 @@ plot_xbar <- function(x, k, data) {
     plot_r_bar <- data %>%
       plot_ly(x = ~unique(k),
               y = ~r_sample$r_sample,
-              mode = "lines") %>%
+              mode = "lines",
+              source = "plot_r_bar") %>%
       add_trace(y = ~r_sample$r_sample, name = 'Amplitude amostral', mode = 'lines+markers') %>%
       add_trace(y = ~r_bar[[1]],
                 name = TeX("\\bar{R}"),

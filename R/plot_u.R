@@ -32,7 +32,8 @@ plot_u <- function(n, c, k, data) {
   data %>%
     plot_ly(x = ~k,
             y = ~u,
-            mode = "lines") %>%
+            mode = "lines",
+            source = "plot_u") %>%
     add_trace(y = ~u, name = 'Contagem por unidade', mode = 'lines+markers') %>%
     add_trace(y = ~u_bar,
               name = TeX("\\bar{u}"),
