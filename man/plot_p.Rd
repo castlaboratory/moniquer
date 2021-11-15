@@ -4,7 +4,7 @@
 \alias{plot_p}
 \title{Plot control graphic P}
 \usage{
-plot_p(n, d, k, data)
+plot_p(n, d, k, phase, data)
 }
 \arguments{
 \item{n}{Variable for sample size}
@@ -12,6 +12,8 @@ plot_p(n, d, k, data)
 \item{d}{Variable for non-expected observations}
 
 \item{k}{Variable for sample index}
+
+\item{phase}{Value to indicate phases range}
 
 \item{data}{Data set with the variables n, d, and k}
 }
