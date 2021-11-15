@@ -4,7 +4,7 @@
 \alias{plot_u}
 \title{Plot control graphic U}
 \usage{
-plot_u(n, c, k, data)
+plot_u(n, c, k, phase, data)
 }
 \arguments{
 \item{n}{Variable for sample size (opportunity area)}
@@ -12,6 +12,8 @@ plot_u(n, c, k, data)
 \item{c}{Variable for number of occurrences}
 
 \item{k}{Variable for sample index}
+
+\item{phase}{Value to indicate phases range}
 
 \item{data}{Data set with the variables n, d, and k}
 }

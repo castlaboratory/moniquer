@@ -4,12 +4,14 @@
 \alias{plot_xbar}
 \title{Plot control graphic X bar}
 \usage{
-plot_xbar(x, k, data)
+plot_xbar(x, k, phase, data)
 }
 \arguments{
 \item{x}{Variable of measurements}
 
 \item{k}{Variable for sample index}
+
+\item{phase}{Value to indicate phases range}
 
 \item{data}{Data set with the variables n, d, and k}
 }
