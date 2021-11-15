@@ -7,6 +7,7 @@
 #' @param n Variable for sample size
 #' @param d Variable for non-expected observations
 #' @param k Variable for sample index
+#' @param phase Value to indicate phases range
 #' @param data Data set with the variables n, d, and k
 #' @return A Plotly graphic
 #' @export
@@ -81,7 +82,7 @@ plot_p <- function(n, d, k, phase, data) {
               mode = 'lines',
               color = I("red"),
               line = list(shape = "hv")) %>%
-    layout(title = paste0("Gráfico P de ", names(data[d])),
+    layout(title = paste0("Gráfico P de ", names(data_phase_1[d])),
            xaxis = list(title = 'Amostra'),
            yaxis = list(title = 'Proporção'),
            hovermode = "x unified",
