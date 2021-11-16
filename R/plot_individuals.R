@@ -31,7 +31,7 @@ plot_individuals <- function(x, k, phase, append = FALSE, index_append = NULL, b
   data_phase_2 <- data[(phase - 1):nrow(data), ]
 
   if (append == TRUE) {
-    data_phase_1 <- data[(phase - 1):index_append, ]
+    data_phase_1 <- data[phase:index_append, ]
   }
 
   data_phase_1$x_bar <- sum(data_phase_1$x)/dim(data_phase_1)[1]
