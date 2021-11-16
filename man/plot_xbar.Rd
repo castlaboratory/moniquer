@@ -4,7 +4,15 @@
 \alias{plot_xbar}
 \title{Plot control graphic X bar}
 \usage{
-plot_xbar(x, k, phase, data)
+plot_xbar(
+  x,
+  k,
+  phase,
+  append = FALSE,
+  index_append = NULL,
+  base_plot = NULL,
+  data
+)
 }
 \arguments{
 \item{x}{Variable of measurements}
@@ -13,7 +21,13 @@ plot_xbar(x, k, phase, data)
 
 \item{phase}{Value to indicate phases range}
 
+\item{append}{Indicator to generate append at base plot}
+
+\item{base_plot}{Plotly object from base plot}
+
 \item{data}{Data set with the variables n, d, and k}
+
+\item{dt_append}{Value to indicate append phase range}
 }
 \value{
 A Plotly graphic

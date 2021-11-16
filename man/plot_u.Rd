@@ -4,7 +4,16 @@
 \alias{plot_u}
 \title{Plot control graphic U}
 \usage{
-plot_u(n, c, k, phase, data)
+plot_u(
+  n,
+  c,
+  k,
+  phase,
+  append = FALSE,
+  index_append = NULL,
+  base_plot = NULL,
+  data
+)
 }
 \arguments{
 \item{n}{Variable for sample size (opportunity area)}
@@ -15,7 +24,13 @@ plot_u(n, c, k, phase, data)
 
 \item{phase}{Value to indicate phases range}
 
+\item{append}{Indicator to generate append at base plot}
+
+\item{base_plot}{Plotly object from base plot}
+
 \item{data}{Data set with the variables n, d, and k}
+
+\item{dt_append}{Value to indicate append phase range}
 }
 \value{
 A Plotly graphic
