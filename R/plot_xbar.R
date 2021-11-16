@@ -166,38 +166,44 @@ plot_xbar <- function(x, k, phase, append = FALSE, index_append = NULL, base_plo
                mathjax = 'cdn')
     } else {
       plot_x_bar <- base_plot %>%
-        add_trace(y = ~x_bar[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~x_bar[[1]],
                   name = TeX("\\bar{\\bar{x}}"),
                   type = 'scatter',
                   mode = 'lines',
                   color = I("green"),
                   line = list(shape = 'linear', width= 3, dash = 'dot'),
                   connectgaps = TRUE) %>%
-        add_trace(y = ~x_bar_ucl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~x_bar_ucl[[1]],
                   name = 'LSC',
                   mode = 'lines',
                   color = I("red"),
                   line = list(shape = "hv")) %>%
-        add_trace(y = ~x_bar_lcl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~x_bar_lcl[[1]],
                   name = 'LIC',
                   mode = 'lines',
                   color = I("red"),
                   line = list(shape = "hv"))
 
       plot_s_bar <- base_plot %>%
-        add_trace(y = ~s_bar[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~s_bar[[1]],
                   name = TeX("\\bar{S}"),
                   type = 'scatter',
                   mode = 'lines',
                   color = I("green"),
                   line = list(shape = 'linear', width= 3, dash = 'dot'),
                   connectgaps = TRUE) %>%
-        add_trace(y = ~s_bar_ucl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~s_bar_ucl[[1]],
                   name = 'LSC',
                   mode = 'lines',
                   color = I("red"),
                   line = list(shape = "hv")) %>%
-        add_trace(y = ~s_bar_lcl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~s_bar_lcl[[1]],
                   name = 'LIC',
                   mode = 'lines',
                   color = I("red"),
@@ -328,38 +334,44 @@ plot_xbar <- function(x, k, phase, append = FALSE, index_append = NULL, base_plo
                mathjax = 'cdn')
     } else {
       plot_x_bar <- base_plot %>%
-        add_trace(y = ~x_bar[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~x_bar[[1]],
                   name = TeX("\\bar{\\bar{x}}"),
                   type = 'scatter',
                   mode = 'lines',
                   color = I("green"),
                   line = list(shape = 'linear', width= 3, dash = 'dot'),
                   connectgaps = TRUE) %>%
-        add_trace(y = ~x_bar_ucl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~x_bar_ucl[[1]],
                   name = 'LSC',
                   mode = 'lines',
                   color = I("red"),
                   line = list(shape = "hv")) %>%
-        add_trace(y = ~x_bar_lcl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~x_bar_lcl[[1]],
                   name = 'LIC',
                   mode = 'lines',
                   color = I("red"),
                   line = list(shape = "hv"))
 
       plot_r_bar <- base_plot %>%
-        add_trace(y = ~r_bar[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~r_bar[[1]],
                   name = TeX("\\bar{R}"),
                   type = 'scatter',
                   mode = 'lines',
                   color = I("green"),
                   line = list(shape = 'linear', width= 3, dash = 'dot'),
                   connectgaps = TRUE) %>%
-        add_trace(y = ~r_bar_ucl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~r_bar_ucl[[1]],
                   name = 'LSC',
                   mode = 'lines',
                   color = I("red"),
                   line = list(shape = "hv")) %>%
-        add_trace(y = ~r_bar_lcl[[1]],
+        add_trace(data = data_phase_1,
+                  y = ~r_bar_lcl[[1]],
                   name = 'LIC',
                   mode = 'lines',
                   color = I("red"),
